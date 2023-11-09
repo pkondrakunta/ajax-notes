@@ -24,7 +24,7 @@
 
             //Step 4. Wait for the server response
             xmlhttprequest.onreadystatechange = function(){
-                if(xmlhttprequest.readyState == 4){
+                if(xmlhttprequest.readyState == 4 && xmlhttprequest.status == 200){
 
                     //Step 5. Get the responseText to manipulate the DOM element
                     divElement.innerHTML = xmlhttprequest.responseText;

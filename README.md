@@ -32,13 +32,29 @@ There are three properties of xmlHttprequest that we need to know:
 - `onreadystatechange`
     This is a property that points to a function every time the state changes
 
-```js
-var xmlhttprequest = new XMLHttpRequest();
 
+- `readyState`
+    This property holds the status of the XMLHttpRequest.
+[readyState_values](https://github.com/pkondrakunta/ajax-notes/blob/master/readme_assets/ready_state_values.png)
+
+- `responseText`
+    The data retrieved from the server will be stored in this property.
+
+```js
 xmlhttprequest.onreadystatechange = function(){
-    //Code here
+    if(xmlhttprequest.readyState == 4 && xmlhttprequest.status == 200){
+
+        divElement.innerHTML = xmlhttprequest.responseText;
+    }
 }
 ```
-- `readyState`
 
-[./readme_assets/ready_state_values.png](./readme_assets/ready_state_values.png)
+## My ajaxservice.jsp
+
+```jsp
+<%
+    String email = request.getParameter("email");
+    out.println("Server Response at " + new java.util.Date());
+
+%>
+```
