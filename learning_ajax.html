@@ -1,0 +1,37 @@
+<html>
+
+<body>
+    Email: <input type="text" id="email" /><br />
+
+    <!-- Step 1. Event Handler, here it is a button click -->
+    <button type="button" onclick="f()">Send me a reminder email</button><br />
+
+    <div id="info-div"></div>
+
+    <script>
+
+        function f() {
+            var divElement = document.getElementById("info-div");
+
+            //Step 2. Create the XMLHttpRequest object
+            var xmlhttprequest = new XMLHttpRequest();
+
+            //Step 3. Call the server side resource asynchronously
+            // xmlhttprequest.open(type_of_call, URL_to_make_call_to, asynchronous)
+            xmlhttprequest.open("get", "ajaxservice.jsp", true);
+            xmlhttprequest.send();
+
+
+            //Step 4. Wait for the server response
+            xmlhttprequest.onreadystatechange = function(){
+                if(xmlhttprequest.readyState == 4){
+
+                    //Step 5. Get the responseText to manipulate the DOM element
+                    divElement.innerHTML = xmlhttprequest.responseText;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
