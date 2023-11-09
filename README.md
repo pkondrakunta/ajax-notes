@@ -1,13 +1,27 @@
-# Learning AJAX
+# Learning AJAX - Asynchronous JavaScript XML 
+
+(you can also use JSON instead of XML but it is still called AJAX)
+
+It is a technique that allows JavaScript to communicate with the server side. DOM manipulation with server response (there is DOM manipulation with JavaScript, don’t confuse that with the server side response).
+
+It is used to refresh certain parts of the page instead of waiting for synchronous responses to a synchronous request. In order to use AJAX you need a special object, the XML HTTP request.
+
+![AJAX Requests](https://github.com/pkondrakunta/ajax-notes/blob/master/readme_assets/ajax_requests.jpg)
+
+> Using ID to traverse the tree is the worst (according to the professor). One of the best ways is to use neither ID nor tag name or class names. You can use selectors. 
+
+> How do we use the following?\
+    CSS
+    - Traverse and style it\
+    Javascript 
+    - Traverse and manipulate it
 
 
-DOM Manipulation (Document Object Manipulation):
-
-Steps in Javascript:
+DOM Manipulation (Document Object Manipulation). There are two steps for DOM manipulation in JS 
 - Traverse 
 - Manipulate
 
-There are two steps. Ensure that the required elements are being selected. You cannot manipulate until you select.
+> Ensure that the required elements are being selected. You cannot manipulate until you select.
 
 
 ### How do you make your application RIA (Rich Internet Application)?
@@ -35,7 +49,7 @@ There are three properties of xmlHttprequest that we need to know:
 
 - `readyState`
     This property holds the status of the XMLHttpRequest.
-[readyState_values](https://github.com/pkondrakunta/ajax-notes/blob/master/readme_assets/ready_state_values.png)
+![readyState_values](https://github.com/pkondrakunta/ajax-notes/blob/master/readme_assets/ready_state_values.png)
 
 - `responseText`
     The data retrieved from the server will be stored in this property.
