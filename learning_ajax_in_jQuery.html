@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    Email: <input type="text" id="email" /><br />
+
+    <!-- Step 1. Event Handler, here it is a button click -->
+    <button type="button">Send me a reminder email</button><br />
+
+    <div id="info-div"></div>
+
+    <script>
+        $("button").click(function () {
+
+            $.get("ajaxservice.jsp", { name: $("#email").val()})
+                .done(function (data) {
+                    alert("Email sent: " + data);
+                });
+        });
+
+    </script>
+</body>
+
+</html>

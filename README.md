@@ -72,3 +72,13 @@ xmlhttprequest.onreadystatechange = function(){
 
 %>
 ```
+
+# jQuery
+
+50% of jQuery is simply selecting the element `$(selector)`
+Remaining 50% is built-in functions
+
+`$(this)` represents the object that caused the instance
+
+[jQuery API Reference](https://api.jquery.com/)
+
